@@ -1,0 +1,39 @@
+<!-- banner sized image -->
+
+{% comment %} Image size as sourced in liquid will be displayed on screens up to the width stated afterwards {% endcomment %}
+
+<img class="some-image-class" 
+    src="{{ image.src | img_url: 'x100'}}" 
+    alt="XXXXXX"
+    srcset="
+    {{ image.src | img_url: 'x576'}} 576w,
+    {{ image.src | img_url: 'x768'}} 768w,
+    {{ image.src | img_url: 'x992'}} 992w,
+    {{ image.src | img_url: 'x1200'}} 1200w,
+    {{ image.src | img_url: 'x2400'}} 2400w">
+
+
+{% comment %} image that takes up half the screen on medium screens and up {% endcomment %}
+    <img class="some-image-class" 
+    src="{{ image.src | img_url: 'x100'}}" 
+    alt="XXXXXX"
+    srcset="
+    {{ image.src | img_url: 'x576'}} 576w,
+    {{ image.src | img_url: 'x768'}} 768w,
+    {{ image.src | img_url: 'x992'}} 992w,
+    {{ image.src | img_url: 'x1200'}} 1200w,
+    {{ image.src | img_url: 'x2400'}} 2400w"
+    sizes="(min-width: 768px) 50vw, 100vw">
+
+
+{% comment %} image that takes up half the screen on medium screens and up {% endcomment %}
+    <img class="some-image-class" 
+    src="{{ image.src | img_url: 'x100'}}" 
+    alt="XXXXXX"
+    srcset="
+    {{ image.src | img_url: 'x576'}} 576w,
+    {{ image.src | img_url: 'x768'}} 768w,
+    {{ image.src | img_url: 'x992'}} 992w,
+    {{ image.src | img_url: 'x1200'}} 1200w,
+    {{ image.src | img_url: 'x2400'}} 2400w"
+    sizes="(min-width: 768px) 34vw, 100vw">

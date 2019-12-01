@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Image testing</title>
+    <style>
+      body {
+        margin: 0;
+        padding: 0;
+      }
+      .title {
+        text-align: center;
+        margin: 0 0 4rem 0;
+      }
+      .some-image-class {
+        width: 100%;
+      }
+      .medium-up-half-width {
+        width: 100%;
+        box-sizing: border-box;
+        padding: 0.5rem;
+      }
+      @media only screen and (min-width: 768px) {
+        .medium-up-half-width {
+          width: 50%;
+        }
+      }
+      .medium-up-one-third {
+        box-sizing: border-box;
+        padding: 0.5rem;
+        width: 100%;
+      }
+      @media only screen and (min-width: 768px) {
+        .medium-up-one-third {
+          width: 33.3333333%;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <h1 class="title">Image Testing</h1>
+
+    <img
+      class="some-image-class"
+      src="./images/image-100w.jpg"
+      alt="XXXXXX"
+      srcset="
+        ./images/image-576w.jpg   576w,
+        ./images/image-768w.jpg   768w,
+        ./images/image-992w.jpg   992w,
+        ./images/image-1200w.jpg 1200w,
+        ./images/image-2400w.jpg 2400w
+      "
+    />
+    <div style="width: 100%;flex-wrap: wrap;display: flex;">
+      <div class="medium-up-half-width">
+        <img
+          class="some-image-class"
+          src="./images/image-100w.jpg"
+          alt="XXXXXX"
+          srcset="
+            ./images/image-576w.jpg   576w,
+            ./images/image-768w.jpg   768w,
+            ./images/image-992w.jpg   992w,
+            ./images/image-1200w.jpg 1200w,
+            ./images/image-2400w.jpg 2400w
+          "
+          sizes="(min-width: 768px) 50vw, 100vw"
+        />
+      </div>
+      <div class="medium-up-half-width">
+        <img
+          class="some-image-class"
+          src="./images/image-100w.jpg"
+          alt="XXXXXX"
+          srcset="
+            ./images/image-576w.jpg   576w,
+            ./images/image-768w.jpg   768w,
+            ./images/image-992w.jpg   992w,
+            ./images/image-1200w.jpg 1200w,
+            ./images/image-2400w.jpg 2400w
+          "
+          sizes="(min-width: 768px) 50vw, 100vw"
+        />
+      </div>
+    </div>
+
+    <div style="width: 100%;flex-wrap: wrap;display: flex;">
+      <div class="medium-up-one-third">
+        <img
+          class="some-image-class"
+          src="./images/image-100w.jpg"
+          alt="XXXXXX"
+          srcset="
+            ./images/image-576w.jpg   576w,
+            ./images/image-768w.jpg   768w,
+            ./images/image-992w.jpg   992w,
+            ./images/image-1200w.jpg 1200w,
+            ./images/image-2400w.jpg 2400w
+          "
+          sizes="(min-width: 768px) 34vw, 100vw"
+        />
+      </div>
+      <div class="medium-up-one-third">
+        <img
+          class="some-image-class"
+          src="./images/image-100w.jpg"
+          alt="XXXXXX"
+          srcset="
+            ./images/image-576w.jpg   576w,
+            ./images/image-768w.jpg   768w,
+            ./images/image-992w.jpg   992w,
+            ./images/image-1200w.jpg 1200w,
+            ./images/image-2400w.jpg 2400w
+          "
+          sizes="(min-width: 768px) 34vw, 100vw"
+        />
+      </div>
+      <div class="medium-up-one-third">
+        <img
+          class="some-image-class"
+          src="./images/image-100w.jpg"
+          alt="XXXXXX"
+          srcset="
+            ./images/image-576w.jpg   576w,
+            ./images/image-768w.jpg   768w,
+            ./images/image-992w.jpg   992w,
+            ./images/image-1200w.jpg 1200w,
+            ./images/image-2400w.jpg 2400w
+          "
+          sizes="(min-width: 768px) 34vw, 100vw"
+        />
+      </div>
+    </div>
+    <script>
+      console.log(window.innerWidth + "px wide");
+    </script>
+  </body>
+</html>
